@@ -177,7 +177,8 @@ public:
 	{
 		::ProcessValue(*(CAvConfigBase*)this, val, GetConfig(index), index, diff);
 	}
-	virtual int get_id(void) { return (int)m_env_config; }
+	//virtual int get_id(void) { return (int)m_env_config; }
+	virtual int get_id(void) { return (long)m_env_config; }
 
 	inline static const T& GetEnvConfig(int index = 0) { return m_env_config[index]; }
 	
